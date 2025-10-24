@@ -1,10 +1,10 @@
 import PageContainer from "../page-container/page-container";
-import Page from "./page";
+import EcoRecicla from "./page";
 
 export default function HomePage() {
-    return (
-        <PageContainer>
-            <Page />
-        </PageContainer>
-    );
+  return (
+    <PageContainer>
+      <EcoRecicla />
+    </PageContainer>
+  );
 }

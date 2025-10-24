@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import {
   Facebook,
   Instagram,
@@ -11,7 +10,6 @@ import {
   MapPin,
   Calendar,
   BookOpen,
-  Users,
   Target,
   Lightbulb,
   Menu,
