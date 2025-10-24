@@ -43,7 +43,6 @@ export default function Equipe() {
 
   return (
     <main>
-      {/* Equipe Section */}
       <section id="equipe" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-700 flex items-center gap-3">
@@ -106,79 +105,6 @@ export default function Equipe() {
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">2025</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Fundamentação Section */}
-      <section
-        id="fundamentacao"
-        className="py-16 px-4 bg-white dark:bg-gray-800"
-      >
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-700">
-            Fundamentação Teórica
-          </h2>
-          <Separator className="mb-8" />
-
-          <div className="space-y-12">
-            {/* Bloco 1 */}
-            <div className="border-l-4 border-green-600 pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-green-600">
-                Sustentabilidade e Meio Ambiente
-              </h3>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-                A forma inadequada com que descartamos aparelhos eletrônicos é
-                um dos maiores problemas ambientais. Componentes tóxicos podem
-                contaminar solo e água, prejudicando pessoas, animais e plantas.
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                (HEUSER, 1998; OLIVEIRA, 2010; CUNHA; SILVA, 2019)
-              </p>
-            </div>
-
-            {/* Bloco 2 */}
-            <div className="border-l-4 border-blue-600 pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-blue-600">
-                Tecnologia da Informação como Aliada
-              </h3>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-                Ferramentas digitais e sistemas de informação ajudam a melhorar
-                processos, reduzir custos e apoiar iniciativas ambientais.
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                (GUEDES, 2011; CASTELLS, 2003; LAUDON; LAUDON, 2014)
-              </p>
-            </div>
-
-            {/* Bloco 3 */}
-            <div className="border-l-4 border-purple-600 pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-purple-600">
-                Engajamento Social e Plataformas Digitais
-              </h3>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-                Plataformas digitais aumentam a participação das pessoas em
-                causas ambientais, incentivando atitudes responsáveis.
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                (PETRÓ, 2014; ROCHEL, 2014; JENKINS, 2009)
-              </p>
-            </div>
-
-            {/* Bloco 4 */}
-            <div className="border-l-4 border-orange-600 pl-6">
-              <h3 className="text-2xl font-semibold mb-4 text-orange-600">
-                Desenvolvimento Web e Gestão de Dados
-              </h3>
-              <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 mb-3">
-                Criar sistemas como o EcoRecicla exige conhecimento em
-                desenvolvimento web e banco de dados para garantir informação
-                correta e confiável.
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                (HEUSER, 1998; SOMMERVILLE, 2011; PRESSMAN; MAXIM, 2016)
-              </p>
             </div>
           </div>
         </div>
