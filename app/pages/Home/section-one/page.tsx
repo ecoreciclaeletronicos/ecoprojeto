@@ -1,9 +1,11 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Recycle } from "lucide-react";
 import { useState } from "react";
 
 export default function Sectionone() {
-  const [, setMobileMenuOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

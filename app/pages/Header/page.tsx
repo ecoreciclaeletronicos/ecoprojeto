@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/themes-toggle";
 import { Recycle, X, Menu } from "lucide-react";

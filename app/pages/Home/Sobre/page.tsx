@@ -90,10 +90,6 @@ export default function Sobrepage() {
                     <span className="text-blue-600 mt-1">•</span>
                     <span>Gestão de dados</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">•</span>
-                    <span>Unir teoria e prática</span>
-                  </li>
                 </ul>
               </div>
             </div>
