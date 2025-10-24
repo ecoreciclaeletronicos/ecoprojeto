@@ -23,13 +23,13 @@ export default function EcoRecicla() {
 
       <Sectionthree />
 
-      <Equipe />
+      <Sobrepage />
 
       <Mapsrecicle />
 
       <Form />
 
-      <Sobrepage />
+      <Equipe />
 
       <Footerpage />
     </div>

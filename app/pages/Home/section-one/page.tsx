@@ -1,11 +1,15 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Recycle } from "lucide-react";
-import { useState } from "react";
+
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 export default function Sectionone() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => setMounted(true), []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,6 +18,9 @@ export default function Sectionone() {
       setMobileMenuOpen(false);
     }
   };
+
+  if (!mounted) return null;
+
   return (
     <section id="home" className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
@@ -35,22 +42,21 @@ export default function Sectionone() {
               de toneladas de resíduos eletrônicos por ano, e no Brasil apenas
               uma pequena parte é reciclada corretamente.
             </p>
-            <div className="flex gap-4 mt-4">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
-                Começar Agora
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => scrollToSection("sobre")}
-              >
-                Saiba Mais
-              </Button>
-            </div>
           </div>
+
           <div className="shrink-0">
-            <div className="w-64 h-64 rounded-full bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center shadow-2xl">
-              <Recycle className="w-40 h-40 text-white" />
+            <div className="w-60 h-60 rounded-full bg-linear-to-br border-green-900 border-2 flex items-center justify-center">
+              <Image
+                src={
+                  theme === "dark"
+                    ? "/images/logo_ecorecicla_dark.png"
+                    : "/images/logo_ecorecicla_light.png"
+                }
+                alt="Logo EcoRecicla"
+                width={500}
+                height={500}
+                unoptimized={true}
+              />
             </div>
           </div>
         </div>

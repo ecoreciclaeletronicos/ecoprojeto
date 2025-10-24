@@ -94,32 +94,6 @@ export default function Sobrepage() {
               </div>
             </div>
           </div>
-
-          <div>
-            <h3 className="text-2xl font-semibold mb-6">
-              Tecnologias Utilizadas
-            </h3>
-            <div className="flex flex-wrap gap-3">
-              {[
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
-                "Next.js",
-                "TailwindCSS",
-                "TypeScript",
-                "APIs de Mapas",
-                "Shadcn UI",
-              ].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-full text-sm font-medium hover:scale-105 transition-transform"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </section>
