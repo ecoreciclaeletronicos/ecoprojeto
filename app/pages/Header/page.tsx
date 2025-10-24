@@ -1,11 +1,19 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/themes-toggle";
-import { Recycle, X, Menu } from "lucide-react";
-import { useState } from "react";
+import { X, Menu } from "lucide-react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
 
 export default function HeaderPage() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Evita erro de hydration
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -14,6 +22,7 @@ export default function HeaderPage() {
       setMobileMenuOpen(false);
     }
   };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/95 dark:bg-gray-900/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
       <div className="container mx-auto px-4">
@@ -22,7 +31,17 @@ export default function HeaderPage() {
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => scrollToSection("home")}
           >
-            <Recycle className="w-8 h-8 text-green-600" />
+            <Image
+              src={
+                theme === "dark"
+                  ? "/images/logo_ecorecicla_dark.png"
+                  : "/images/logo_ecorecicla_light.png"
+              }
+              alt="Logo EcoRecicla"
+              width={70}
+              height={70}
+              unoptimized={true}
+            />
             <span className="text-2xl font-bold text-green-700">
               EcoRecicla
             </span>
@@ -42,7 +61,7 @@ export default function HeaderPage() {
             <ModeToggle />
           </nav>
 
-          {/* Mobile*/}
+          {/* Mobile */}
           <Button
             variant="ghost"
             size="icon"
