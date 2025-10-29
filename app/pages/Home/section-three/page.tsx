@@ -65,10 +65,10 @@ export default function Sectionthree() {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
-                  <Smartphone className="w-8 h-8 text-green-600 dark:text-green-400" />
+                <div className="shrink-0 w-10 h-10 flex items-center justify-center">
+                  <Smartphone className="w-8 h-8" />
                 </div>
-                <p className="text-gray-800 dark:text-gray-300 pt-1">
+                <p className="text-gray-700 dark:text-gray-300 pt-1">
                   <strong>Plataforma online</strong> simples e acessível para
                   conectar a população a pontos de coleta e empresas
                   recicladoras
@@ -76,27 +76,27 @@ export default function Sectionthree() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 flex items-center justify-center">
-                  <MapPin className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  <MapPin className="w-8 h-8 " />
                 </div>
-                <p className="text-gray-800 dark:text-gray-300 pt-1">
+                <p className="text-gray-700 dark:text-gray-300 pt-1">
                   <strong>Localização de pontos de descarte</strong> próximos à
                   sua região
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 flex items-center justify-center">
-                  <Calendar className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  <Calendar className="w-8 h-8" />
                 </div>
-                <p className="text-gray-800 dark:text-gray-300 pt-1">
+                <p className="text-gray-700 dark:text-gray-300 pt-1">
                   <strong>Agendamento de coletas domiciliares</strong> de forma
                   prática e rápida
                 </p>
               </div>
               <div className="flex items-start gap-4">
                 <div className="shrink-0 w-10 h-10 flex items-center justify-center">
-                  <BookOpen className="w-8 h-8 text-green-600 dark:text-green-400" />
+                  <BookOpen className="w-8 h-8" />
                 </div>
-                <p className="text-gray-800 dark:text-gray-300 pt-1">
+                <p className="text-gray-700 dark:text-gray-300 pt-1">
                   <strong>Informações educativas</strong> sobre reciclagem e
                   remoção segura de dados
                 </p>
