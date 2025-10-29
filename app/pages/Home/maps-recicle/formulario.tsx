@@ -84,20 +84,23 @@ export default function Form() {
   const inputThemeClasses =
     "bg-white border-gray-300 text-gray-800 placeholder-gray-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:placeholder-gray-400 focus:ring-green-500 focus:border-green-500";
 
+  const errorTextClass = "text-red-600 dark:text-red-400 text-sm mt-1 ml-1";
+  const alignedErrorTextClass = "text-red-600 dark:text-red-400 text-sm mt-1";
+
   return (
     <div className="mx-4 sm:mx-auto sm:max-w-4xl pb-10">
       <div
         className={`p-4 sm:p-8 ${lightFormBg} ${lightFormText} ${darkFormBg} ${darkFormText} rounded-xl shadow-md border border-green-200 dark:border-green-700`}
       >
         {showSuccessAlert && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
-            <Alert className="bg-green-50 border-green-400 text-green-700 max-w-sm mx-auto shadow-2xl p-6 transform transition-all duration-300">
-              <AlertTitle className="font-bold text-xl">
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+            <Alert className="bg-green-50 border-green-400 text-green-700 max-w-sm mx-auto shadow-2xl p-6 transform transition-all duration-300 text-center">
+              <AlertTitle className="font-bold text-xl mb-4">
                 Solicitação enviada!
               </AlertTitle>
-              <AlertDescription className="mt-2">
-                Dentro de <strong>07 dias úteis</strong> a equipe entrará em
-                contato. Agradecemos o seu interesse!
+              <AlertDescription>
+                A equipe entrará em contato até 07 dias úteis. Agradecemos o seu
+                interesse!
               </AlertDescription>
             </Alert>
           </div>
@@ -115,113 +118,110 @@ export default function Form() {
             a ser mais sustentável.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <Input
-              name="nomeCompleto"
-              placeholder="Nome Completo"
-              value={formData.nomeCompleto}
-              onChange={handleChange}
-              className={`flex-1 ${inputThemeClasses}`}
-            />
-            <Input
-              name="nomeEmpresa"
-              placeholder="Nome da Empresa"
-              value={formData.nomeEmpresa}
-              onChange={handleChange}
-              className={`flex-1 ${inputThemeClasses}`}
-            />
-          </div>
-          {(errors.nomeCompleto || errors.nomeEmpresa) && (
+          <div>
             <div className="flex flex-col md:flex-row gap-4">
-              {errors.nomeCompleto && (
-                <p className="text-red-600 dark:text-red-400 text-sm flex-1">
-                  {errors.nomeCompleto}
-                </p>
-              )}
-              {errors.nomeEmpresa && (
-                <p className="text-red-600 dark:text-red-400 text-sm flex-1">
-                  {errors.nomeEmpresa}
-                </p>
-              )}
-            </div>
-          )}
+              <div className="flex-1">
+                <Input
+                  name="nomeCompleto"
+                  placeholder="Nome Completo"
+                  value={formData.nomeCompleto}
+                  onChange={handleChange}
+                  className={inputThemeClasses}
+                />
+                {errors.nomeCompleto && (
+                  <p className={errorTextClass}>{errors.nomeCompleto}</p>
+                )}
+              </div>
 
-          <div className="flex flex-col md:flex-row gap-4">
-            <Input
-              name="email"
-              type="email"
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`flex-1 ${inputThemeClasses}`}
-            />
-            <Input
-              name="telefone"
-              placeholder="Telefone"
-              value={formData.telefone}
-              onChange={handleChange}
-              className={`flex-1 ${inputThemeClasses}`}
-            />
+              <div className="flex-1">
+                <Input
+                  name="nomeEmpresa"
+                  placeholder="Nome da Empresa"
+                  value={formData.nomeEmpresa}
+                  onChange={handleChange}
+                  className={inputThemeClasses}
+                />
+                {errors.nomeEmpresa && (
+                  <p className={errorTextClass}>{errors.nomeEmpresa}</p>
+                )}
+              </div>
+            </div>
           </div>
-          {(errors.email || errors.telefone) && (
+
+          <div>
             <div className="flex flex-col md:flex-row gap-4">
-              {errors.email && (
-                <p className="text-red-600 dark:text-red-400 text-sm flex-1">
-                  {errors.email}
-                </p>
-              )}
-              {errors.telefone && (
-                <p className="text-red-600 dark:text-red-400 text-sm flex-1">
-                  {errors.telefone}
-                </p>
-              )}
+              <div className="flex-1">
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className={inputThemeClasses}
+                />
+                {errors.email && (
+                  <p className={errorTextClass}>{errors.email}</p>
+                )}
+              </div>
+
+              <div className="flex-1">
+                <Input
+                  name="telefone"
+                  placeholder="Telefone"
+                  value={formData.telefone}
+                  onChange={handleChange}
+                  className={inputThemeClasses}
+                />
+                {errors.telefone && (
+                  <p className={errorTextClass}>{errors.telefone}</p>
+                )}
+              </div>
             </div>
-          )}
+          </div>
 
-          <Input
-            name="cidade"
-            placeholder="Cidade"
-            value={formData.cidade}
-            onChange={handleChange}
-            className={inputThemeClasses}
-          />
-          {errors.cidade && (
-            <p className="text-red-600 dark:text-red-400 text-sm">
-              {errors.cidade}
-            </p>
-          )}
-
-          <Textarea
-            name="mensagem"
-            placeholder="Escreva sua mensagem"
-            value={formData.mensagem}
-            onChange={handleChange}
-            className={`min-h-[100px] ${inputThemeClasses}`}
-          />
-          {errors.mensagem && (
-            <p className="text-red-600 dark:text-red-400 text-sm">
-              {errors.mensagem}
-            </p>
-          )}
-
-          <label className="flex items-center gap-3 text-sm cursor-pointer select-none text-gray-600 dark:text-gray-300">
-            <input
-              type="checkbox"
-              name="politica"
-              checked={formData.politica}
+          <div>
+            <Input
+              name="cidade"
+              placeholder="Cidade"
+              value={formData.cidade}
               onChange={handleChange}
-              className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2 checked:bg-green-600 dark:bg-gray-700 dark:border-gray-600"
+              className={inputThemeClasses}
             />
-            Eu concordo com a{" "}
-            <strong className="ml-1 text-green-700 dark:text-green-400">
-              Política de Privacidade
-            </strong>
-          </label>
-          {errors.politica && (
-            <p className="text-red-600 dark:text-red-400 text-sm">
-              {errors.politica}
-            </p>
-          )}
+            {errors.cidade && <p className={errorTextClass}>{errors.cidade}</p>}
+          </div>
+
+          <div>
+            <Textarea
+              name="mensagem"
+              placeholder="Escreva sua mensagem"
+              value={formData.mensagem}
+              onChange={handleChange}
+              className={`min-h-[100px] ${inputThemeClasses}`}
+            />
+            {errors.mensagem && (
+              <p className={errorTextClass}>{errors.mensagem}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="flex items-center gap-1 text-sm cursor-pointer select-none text-gray-600 dark:text-gray-300">
+              <input
+                type="checkbox"
+                name="politica"
+                checked={formData.politica}
+                onChange={handleChange}
+                className="cursor-pointer w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 focus:ring-2 checked:bg-green-600 dark:bg-gray-700 dark:border-gray-600"
+              />
+              Eu concordo com a
+              <strong className="text-green-700 dark:text-green-400">
+                Política de Privacidade
+              </strong>
+            </label>
+            {errors.politica && (
+              // *** AQUI É ONDE USAMOS A NOVA CLASSE ***
+              <p className={alignedErrorTextClass}>{errors.politica}</p>
+            )}
+          </div>
 
           <Button
             type="submit"
