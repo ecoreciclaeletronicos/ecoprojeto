@@ -14,7 +14,7 @@ export default function Sectionthree() {
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-red-50 dark:bg-red-950 p-8 rounded-lg">
+          <div className="bg-red-50 dark:bg-red-950 p-8 rounded-lg border border-red-200 dark:border-red-800">
             <h3 className="text-2xl font-bold mb-6 text-red-700 dark:text-red-400">
               O Problema
             </h3>
