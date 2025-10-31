@@ -2,7 +2,6 @@ import {
   BookOpen,
   Calendar,
   Flag,
-  Heart,
   Home,
   MapPin,
   Recycle,

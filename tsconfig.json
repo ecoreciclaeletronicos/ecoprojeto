@@ -17,11 +17,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".", // 🔹 importante para o alias funcionar
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./*"
-      ] // 🔹 aponta @/ direto para a raiz
+      ]
     },
     "plugins": [
       {
@@ -36,6 +37,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next"
   ]
 }

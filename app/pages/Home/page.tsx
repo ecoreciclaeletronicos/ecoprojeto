@@ -8,9 +8,9 @@ import Footerpage from "../Footer/page";
 import Sectionone from "./section-one/page";
 import Sectiontwo from "./section-two/page";
 import Sectionthree from "./section-three/page";
-import Mapsrecicle from "./maps-recicle/page";
 import Sobrepage from "./Sobre/page";
-import Form from "./maps-recicle/formulario";
+import Form from "./section-abree/formulario";
+import AbraaeCard from "./section-abree/page";
 
 export default function EcoRecicla() {
   return (
@@ -25,7 +25,7 @@ export default function EcoRecicla() {
 
       <Sobrepage />
 
-      <Mapsrecicle />
+      <AbraaeCard />
 
       <Form />
 
